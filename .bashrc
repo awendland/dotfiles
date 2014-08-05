@@ -1,3 +1,7 @@
+# Colorize commandline output
+export CLICOLOR=1
+export LSCOLORS=GxFxCxDxBxegedabagaced
+
 alias whereami='pwd'
 alias filesthatcontain='grep -Rl . -e'
 alias onlyin2nd='grep -Fxvf'
