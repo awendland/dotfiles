@@ -1,0 +1,7 @@
+mkdir ~/.dyndns
+cp update.sh ~/.dyndns/
+cd ~/.dyndns/
+chmod 700 update.sh
+crontab -e
+# Add this next line to the end
+# */5 * * * * ~/.dyndns/update.sh >/dev/null 2>&1
