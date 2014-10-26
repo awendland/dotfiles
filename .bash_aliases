@@ -8,4 +8,5 @@ alias gocode='cd $CODEDIR'
 alias webserver='python -m SimpleHTTPServer'
 alias rem='history | grep -e'
 alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias copy='rsync -azhP'
 # Bulk renaming command reference @ http://www.peteryu.ca/tutorials/shellscripting/batch_rename
