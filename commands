@@ -1,1 +1,0 @@
-rsync -azhP # Copy files/dirs with progress output and in archive mode
