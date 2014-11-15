@@ -33,3 +33,8 @@ fi
 if [ -f ~/.bash_profile.local ]; then
     . ~/.bash_profile.local
 fi
+
+# Bash completion on OSX w/ Homebrew
+if [ -f `brew --prefix`/etc/bash_completion ]; then
+    . `brew --prefix`/etc/bash_completion
+fi

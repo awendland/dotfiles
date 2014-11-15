@@ -1,4 +1,6 @@
 tree
 ssmtp
 ipython
+wget
 brew
+bash-completion
