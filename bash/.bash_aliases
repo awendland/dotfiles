@@ -15,12 +15,20 @@ alias gocode='cd $CODEDIR'
 alias whereami='pwd'
 
 # Grep aliases
+# Make grep always use extended version
+alias grep='grep -E'
 # Alias for finding all files containg some text
 alias filesthatcontain='grep -Rl . -e'
 # Alias for finding text that only occurs in the second file provided
 alias onlyin2nd='grep -Fxvf'
 # Alias for easily grepping history
 alias rem='history | grep -e'
+
+# Less aliases
+# Make less always respect ansi-colors
+alias less='less -R'
+# Alias for chopping lines in less instead of wrapping them
+alias lessnw='less -S'
 
 # List dir contents aliases
 # Alias to improve ls coloring
