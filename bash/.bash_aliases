@@ -14,6 +14,9 @@ alias gocode='cd $CODEDIR'
 # Alias for times when I can't remember pwd
 alias whereami='pwd'
 
+# Alias for du to size a folder
+alias size='du -sh'
+
 # Grep aliases
 # Make grep always use extended version
 alias grep='grep -E'
