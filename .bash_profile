@@ -30,8 +30,8 @@ if [ -f ~/.bash/.bash_prompt ]; then
     . ~/.bash/.bash_prompt
 fi
 
-if [ -f ~/.bash/.bash_profile.local ]; then
-    . ~/.bash/.bash_profile.local
+if [ -f ~/.bash_profile.local ]; then
+    . ~/.bash_profile.local
 fi
 
 # Brew dependent commands
@@ -40,4 +40,9 @@ if hash brew 2>/dev/null; then
     if [ -f `brew --prefix`/etc/bash_completion ]; then
         . `brew --prefix`/etc/bash_completion
     fi
+fi
+
+# Enable bash completion if available
+if [ -f /etc/bash_completion ]; then
+ . /etc/bash_completion
 fi
