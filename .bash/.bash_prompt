@@ -81,6 +81,7 @@ set_prompts() {
         tput sgr0 # reset colors
 
         bold=$(tput bold)
+        dim=$(tput dim)
         reset=$(tput sgr0)
 
         # Solarized colors
@@ -96,6 +97,7 @@ set_prompts() {
         yellow=$(tput setaf 136)
     else
         bold=""
+        dim="\e[2m"
         reset="\e[0m"
 
         black="\e[1;30m"
@@ -129,6 +131,10 @@ set_prompts() {
     PS1="\[\033]0;\w\007\]"
 
     PS1+="\n" # newline
+    # if in screen session
+    if [[ "$STY" ]]; then
+        PS1+="\[$dim\]screen\[$reset\] " # prefix with screen
+    fi
     PS1+="\[$userStyle\]\u" # username
     PS1+="\[$reset$white\]@"
     PS1+="\[$hostStyle\]\h" # host
