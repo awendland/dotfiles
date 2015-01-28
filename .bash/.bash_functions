@@ -33,3 +33,50 @@ function ansicodes() {
 	done
 	echo
 }
+
+# Epoch time conversion
+# http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
+epoch() {
+  TESTREG="[\d{10}]"
+  if [[ "$1" =~ $TESTREG ]]; then
+    # is epoch
+    date -d @$*
+  else
+    # is date
+    if [ $# -gt 0 ]; then
+      date +%s --date="$*"
+    else
+      date +%s
+    fi
+  fi
+}
+
+# Easily extract all compressed file types
+# http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
+extract () {
+   if [ -f "$1" ] ; then
+       case $1 in
+           *.tar.bz2)   tar xvjf -- "$1"    ;;
+           *.tar.gz)    tar xvzf -- "$1"    ;;
+           *.bz2)       bunzip2 -- "$1"     ;;
+           *.rar)       unrar x -- "$1"     ;;
+           *.gz)        gunzip -- "$1"      ;;
+           *.tar)       tar xvf -- "$1"     ;;
+           *.tbz2)      tar xvjf -- "$1"    ;;
+           *.tgz)       tar xvzf -- "$1"    ;;
+           *.zip)       unzip -- "$1"       ;;
+           *.Z)         uncompress -- "$1"  ;;
+           *.7z)        7z x -- "$1"        ;;
+           *)           echo "don't know how to extract '$1'..." ;;
+       esac
+   else
+       echo "'$1' is not a valid file"
+   fi
+}
+
+# Other Helpers
+# Define a word using collinsdictionary.com
+# http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
+define() {
+  curl -s "http://www.collinsdictionary.com/dictionary/english/$*" | sed -n '/class="def"/p' | awk '{gsub(/.*<span class="def">|<\/span>.*/,"");print}' | sed "s/<[^>]\+>//g";
+}
