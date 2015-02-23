@@ -35,9 +35,9 @@ alias lessnw='less -S'
 
 # List dir contents aliases
 # Alias to improve ls coloring
-alias ls='ls -GFa'
 # Alias similar to ubuntu ll
-alias ll='ls -GFlah'
+alias ls='ls -GFa --color=auto'
+alias ll='ls -lh'
 
 # Copying/Transfer
 # Alias for useful rsync command
