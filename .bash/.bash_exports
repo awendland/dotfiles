@@ -2,7 +2,7 @@
 
 # bash_config
 
-# Make vim the default editor
+# Make nano the default editor
 export EDITOR="nano"
 
 # Ignore duplicate commands in the history
