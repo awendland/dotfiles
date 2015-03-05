@@ -2,8 +2,13 @@
 
 # bash_functions
 
-# Code Helpers
-# Setup simple client-side web repo
+#H Functions - Code Helpers
+#A List available personal commands
+function bashcmds() {
+  python "$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/printout_cmds.py"
+}
+
+#A Setup simple client-side web repo
 function fleshweb() {
 	echo ""
 	if [ -z "$1" ]; then
@@ -19,7 +24,7 @@ function fleshweb() {
 	fi
 }
 
-# Print out ansi code table
+#A Print out ansi code table
 function ansicodes() {
 	T='gYw'   # The test text
 	echo -e "\n                 40m     41m     42m     43m     44m     45m     46m     47m";
@@ -34,9 +39,9 @@ function ansicodes() {
 	echo
 }
 
-# Epoch time conversion
+#A Epoch time conversion
 # http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
-epoch() {
+function epoch() {
   TESTREG="[\d{10}]"
   if [[ "$1" =~ $TESTREG ]]; then
     # is epoch
@@ -51,9 +56,9 @@ epoch() {
   fi
 }
 
-# Easily extract all compressed file types
+#A Easily extract all compressed file types
 # http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
-extract () {
+function extract () {
    if [ -f "$1" ] ; then
        case $1 in
            *.tar.bz2)   tar xvjf -- "$1"    ;;
@@ -74,9 +79,9 @@ extract () {
    fi
 }
 
-# Other Helpers
-# Define a word using collinsdictionary.com
+#H Functions - Other Helpers
+#A Define a word using collinsdictionary.com
 # http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
-define() {
+function define() {
   curl -s "http://www.collinsdictionary.com/dictionary/english/$*" | sed -n '/class="def"/p' | awk '{gsub(/.*<span class="def">|<\/span>.*/,"");print}' | sed "s/<[^>]\+>//g";
 }
