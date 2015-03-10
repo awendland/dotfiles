@@ -21,6 +21,8 @@ export HISTSIZE=10000
 
 # Don't clear the screen after quitting a manual page
 export MANPAGER="less -X"
+export GREP_OPTIONS='--color=auto'
+export LESS=-XR
 
 # Make new shells get the history lines from all previous
 # shells instead of the default "last window closed" history
