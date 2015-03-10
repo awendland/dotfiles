@@ -5,7 +5,9 @@
 #H Functions - Code Helpers
 #A List available personal commands
 function bashcmds() {
-  python "$( dirname "${BASH_SOURCE[0]}" )/printout_cmds.py"
+  cd $( dirname "${BASH_SOURCE[0]}" )
+  python "$( pwd )/printout_cmds.py"
+  cd -
 }
 
 #A Copy the appropriate files over
