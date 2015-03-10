@@ -10,12 +10,17 @@ function bashcmds() {
 
 #A Copy the appropriate files over
 function installdotfiles() {
-  DIR=$( dirname "${BASH_SOURCE[0]}" )
-  cp $DIR/.* ~/.bash/
-  cp $DIR/*.* ~/.bash/
-  cp $DIR/../.bash_profile ~/
-  cp $DIR/../.bashrc ~/
-  cp $DIR/../.screenrc ~/
+  if [ -f .bashrc ]; then
+    cp .bash/.* ~/.bash/
+    cp .bash/*.* ~/.bash/
+    cp .bash_profile ~/
+    cp .bashrc ~/
+    cp .screenrc ~/
+    echo ""
+    echo "dotfiles copied to home directory"
+  else
+     echo "Error: cwd must be in the root personal_env_config dir"
+  fi
 }
 
 #A Setup simple client-side web repo
