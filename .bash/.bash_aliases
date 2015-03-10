@@ -36,18 +36,12 @@ alias onlyin2nd='grep -Fxvf'
 alias rem='history | grep -e'
 
 #H Less aliases
-#A Make less always respect ansi-colors
-alias less='less -R'
 #A Alias for chopping lines in less instead of wrapping them
 alias lessnw='less -S'
 
 #H List dir contents aliases
-#A Alias to improve ls coloring, test is ls supports --color or -G
-if ls --color -d . >/dev/null 2>&1; then
-    alias ls='ls -Fa --color=auto'
-else
-    alias ls='ls -GFa'
-fi
+#A Alias to show additional file/dir data
+alias ls='ls -Fa'
 #A Alias similar to ubuntu ll
 alias ll='ls -lh'
 
