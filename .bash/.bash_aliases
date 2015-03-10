@@ -41,7 +41,7 @@ alias lessnw='less -S'
 
 #H List dir contents aliases
 #A Alias to show additional file/dir data
-alias ls='ls -Fa'
+alias ls='ls -FA'
 #A Alias similar to ubuntu ll
 alias ll='ls -lh'
 
