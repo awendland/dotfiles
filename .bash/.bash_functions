@@ -5,8 +5,17 @@
 #H Functions - Code Helpers
 #A List available personal commands
 function bashcmds() {
-  cd "$( dirname "${BASH_SOURCE[0]}" )"
-  python "$( pwd )/printout_cmds.py"
+  python "$( dirname "${BASH_SOURCE[0]}" )/printout_cmds.py"
+}
+
+#A Copy the appropriate files over
+function installdotfiles() {
+  DIR=$( dirname "${BASH_SOURCE[0]}" )
+  cp $DIR/.* ~/.bash/
+  cp $DIR/*.* ~/.bash/
+  cp $DIR/../.bash_profile ~/
+  cp $DIR/../.bashrc ~/
+  cp $DIR/../.screenrc ~/
 }
 
 #A Setup simple client-side web repo
