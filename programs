@@ -5,4 +5,7 @@ wget			# Easy Internet download program
 brew			# OSX package manager
 bash-completion	# Adds tab completion to more of bash
 aria2c			# torrent/magnet download
-pv				# cat, with a progress bar
+pv			# cat, with a progress bar
+
+# OSX
+reddit-background	# Update desktop background by reddit rss https://github.com/rconradharris/reddit-background
