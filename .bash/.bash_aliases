@@ -20,6 +20,23 @@ alias gocode='cd $CODEDIR'
 alias whereami='pwd'
 #A Alias for du to size a folder
 alias size='du -sh'
+#A Move to trash
+if is_osx; then
+	if hash rmtrash 2>/dev/null; then
+	    alias trash='rmtrash'
+	else
+		printf "\n\\033[1;31mALERT:\\033[0m You should \\033[34m'brew install rmtrash'\\033[0m for better rm practice"
+	fi
+else
+	if hash gvfs-trash 2>/dev/null; then
+		alias trash='gvfs-trash'
+	elif hash trash-cli 2>/dev/null; then
+		alias trash='trash-cli'
+	else
+		printf "\n\\033[1;31mALERT:\\033[0m You should \\033[34m'sude apt-get install trash-cli'\\033[0m for better rm practice"
+	fi
+fi
+
 #H List dir contents aliases
 #A Alias to show additional file/dir data
 alias ls='ls -FA'
