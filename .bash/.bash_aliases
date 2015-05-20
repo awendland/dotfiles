@@ -20,6 +20,15 @@ alias gocode='cd $CODEDIR'
 alias whereami='pwd'
 #A Alias for du to size a folder
 alias size='du -sh'
+#H List dir contents aliases
+#A Alias to show additional file/dir data
+alias ls='ls -FA'
+#A Alias similar to ubuntu ll
+alias ll='ls -lh'
+
+#H Copying/Transfer
+#A Alias for useful rsync command
+alias copy='rsync -azhP'
 
 #H Git aliases
 #A Get the url of the current repo's origin
@@ -38,16 +47,6 @@ alias rem='history | grep -e'
 #H Less aliases
 #A Alias for chopping lines in less instead of wrapping them
 alias lessnw='less -S'
-
-#H List dir contents aliases
-#A Alias to show additional file/dir data
-alias ls='ls -FA'
-#A Alias similar to ubuntu ll
-alias ll='ls -lh'
-
-#H Copying/Transfer
-#A Alias for useful rsync command
-alias copy='rsync -azhP'
 
 #H Internet aliases
 #A Alias for Python's SimpleHTTPServer
