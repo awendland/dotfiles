@@ -24,10 +24,10 @@ enable_color_support() {
         export TERM="xterm-256color"
     fi
 
-    if [ is_osx ]; then
+    if is_osx; then
         alias ls="ls -FAG" # or CLICOLOR=1
 
-    elif [ is_ubuntu ]; then
+    elif is_ubuntu; then
         if [ -x /usr/bin/dircolors ]; then
 
             test -r ~/.dircolors \
@@ -61,7 +61,7 @@ set_ls_colors() {
     #    environment variable (built-in defaults are used if this
     #    variable is not set)
 
-    if [ "$OS" == "osx" ]; then
+    if is_osx; then
 
         LSCOLORS=""
 
