@@ -32,10 +32,14 @@ else
 		alias trash='gvfs-trash'
 	elif hash trash-cli 2>/dev/null; then
 		alias trash='trash-cli'
+	elif hash trash 2>/dev/null; then
+		alias trash='trash'
 	else
 		printf "\n\\033[1;31mALERT:\\033[0m You should \\033[34m'sude apt-get install trash-cli'\\033[0m for better rm practice"
 	fi
 fi
+#A Recommend against rm
+alias rm='printf "\nThis is not the command you are looking for.\n\\\\rm\n"; false'
 
 #H List dir contents aliases
 #A Alias to show additional file/dir data
