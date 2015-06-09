@@ -39,7 +39,7 @@ else
 	fi
 fi
 #A Recommend against rm
-alias rm='printf "\nThis is not the command you are looking for.\n\\\\rm\n"; false'
+alias rm='printf "\\033[1;31mThis is not the command you are looking for.\\033[0m\nBut if need be --> \\033[1;34m\\\\rm\\033[0m"; false'
 
 #H List dir contents aliases
 #A Alias to show additional file/dir data
