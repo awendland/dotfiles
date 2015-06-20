@@ -1,0 +1,3 @@
+[submodule "nano-highlight"]
+	path = nano-highlight
+	url = ./nano-highlight/

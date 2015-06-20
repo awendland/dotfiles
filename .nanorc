@@ -1,0 +1,38 @@
+## Nano configuration file
+
+set smooth
+set autoindent                                       
+
+## From https://github.com/serialhex/nano-highlight
+## spifftastic nano highlighting nano
+include "~/.nano/nanorc.nanorc"
+
+## C/C++
+include "~/.nano/c.nanorc"
+
+## Python
+include "~/.nano/python.nanorc"
+
+## Bourne shell scripts
+include "~/.nano/bash.nanorc"
+
+## CSS
+include "~/.nano/css.nanorc"
+
+## JavaScript
+include "~/.nano/js.nanorc"
+
+## HTML
+include "~/.nano/html.nanorc"
+
+## XML
+include "~/.nano/xml.nanorc"
+
+## Markdown
+include "~/.nano/markdown.nanorc"
+
+## Java
+include "~/.nano/java.nanorc"
+
+## PHP
+include "~/.nano/php.nanorc"

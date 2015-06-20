@@ -18,11 +18,15 @@ function installdotfiles() {
     cp .bash_profile ~/
     cp .bashrc ~/
     cp .screenrc ~/
+    cp .nanorc ~/
+    mkdir -p ~/.nano && cp nano-highlight/*.nanorc ~/.nano/
     cp .gitignore_global ~/
     echo ""
     echo "dotfiles copied to home directory"
     git config --global core.excludesfile ~/.gitignore_global
     echo "global gitignore installed"
+    reloadbash
+    echo "bash reloaded"
   else
      echo "Error: cwd must be in the root personal_env_config dir"
   fi
