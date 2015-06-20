@@ -81,6 +81,10 @@ alias ipinfo='curl ipinfo.io'
 
 #H OSX
 #A Show hidden files in Finder
-alias showdotfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+if is_osx; then
+	alias showdotfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
+fi
 #A Hide hidden files in Finder
-alias hidedotfiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+if is_osx; then
+	alias hidedotfiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
+fi
