@@ -2,6 +2,9 @@
 
 # bash_profile
 
+# /usr/local/bin precedence
+export PATH=/usr/local/bin:$PATH
+
 # OS Detection
 function is_osx() {
     [[ "$OSTYPE" =~ ^darwin ]] || return 1
