@@ -88,3 +88,11 @@ fi
 if is_osx; then
 	alias hidedotfiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
 fi
+#A Open Markdown editor
+if is_osx; then
+	if [ -d /Applications/MacDown.app ]; then
+		alias markdown='open -a "MacDown"'
+	else
+		alias markdown='There is no Markdown handler setup.'
+	fi
+fi
