@@ -1,6 +1,9 @@
 #!/bin/bash
 
-# bash_config
+# bash_exports
+
+# Enable Android View Hierarchy debugging
+export ANDROID_HVPROTO=ddm
 
 # Make nano the default editor
 export EDITOR="nano"
