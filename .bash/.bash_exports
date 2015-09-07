@@ -2,6 +2,10 @@
 
 # bash_exports
 
+# Set the bash encoding as UTF-8
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
 # Enable Android View Hierarchy debugging
 export ANDROID_HVPROTO=ddm
 
