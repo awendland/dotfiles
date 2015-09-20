@@ -80,16 +80,12 @@ alias wanip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias ipinfo='curl ipinfo.io'
 
 #H OSX
+if is_osx; then
 #A Show hidden files in Finder
-if is_osx; then
 	alias showdotfiles='defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder'
-fi
 #A Hide hidden files in Finder
-if is_osx; then
 	alias hidedotfiles='defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder'
-fi
 #A Open Markdown editor
-if is_osx; then
 	if [ -d /Applications/MacDown.app ]; then
 		alias markdown='open -a "MacDown"'
 	else

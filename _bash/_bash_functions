@@ -12,40 +12,19 @@ function bashcmds() {
 
 #A Copy the appropriate files over
 function installdotfiles() {
-  if [ -f .bashrc ]; then
-    cp .bash/.* ~/.bash/
-    cp .bash/*.* ~/.bash/
-    cp .bash_profile ~/
-    cp .bashrc ~/
-    cp .screenrc ~/
-    cp .nanorc ~/
-    mkdir -p ~/.nano && cp nano-highlight/*.nanorc ~/.nano/
-    cp .gitignore_global ~/
-    echo ""
-    echo "dotfiles copied to home directory"
-    git config --global core.excludesfile ~/.gitignore_global
-    echo "global gitignore installed"
-    reloadbash
-    echo "bash reloaded"
-  else
-     echo "Error: cwd must be in the root personal_env_config dir"
-  fi
+  sh ~/.bash/install_dot_files.sh
 }
 
-#A Setup simple client-side web repo
-function fleshweb() {
-	echo ""
-	if [ -z "$1" ]; then
-		echo "No repository name supplied"
-	else
-		git clone https://github.com/awendland/simple-web-boilerplate.git "$1"
-		cd "$1"
-		rm -rf ".git/"
-		git init
-		echo ""
-		echo "Fleshed out \"$1\""
-		cd ..
-	fi
+#A Flesh out a new repository from a provided template
+function fleshcode() {
+  if [ "$1" == "update" ] || [ ! -f ~/.bash/fleshcode.py ]; then
+    curl "https://raw.githubusercontent.com/awendland/code-boilerplates/master/fleshcode.py" > ~/.bash/fleshcode.py
+  fi
+  if [ "$1" == "update" ]; then
+    printf "fleshcode.py updated"
+  else
+    python ~/.bash/fleshcode.py "$@"
+  fi
 }
 
 #A Print out ansi code table
@@ -83,7 +62,7 @@ function epoch() {
 
 #A Easily extract all compressed file types
 # http://www.quora.com/What-are-some-of-the-best-command-prompt-or-the-terminal-tricks/answer/Dave-Kimber-1
-function extract () {
+function extract() {
    if [ -f "$1" ] ; then
        case $1 in
            *.tar.bz2)   tar xvjf -- "$1"    ;;
