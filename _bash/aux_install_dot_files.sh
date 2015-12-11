@@ -3,6 +3,7 @@
 set -e
 printf "\n"
 if [ -f _bashrc ]; then
+  mkdir -p ~/.bash
   for i in _bash/_bash*; do cp $i ~/`echo $i | sed "s/_bash/\.bash/g"`; done
   for i in _bash/aux*; do cp $i ~/`echo $i | sed "s/aux_//g" | sed "s/_bash/\.bash/g"`; done
   cp _bash_profile ~/.bash_profile
