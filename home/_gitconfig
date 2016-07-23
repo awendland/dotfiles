@@ -1,0 +1,24 @@
+[core]
+	excludesfile = /Users/awendland/.gitignore_global
+	editor = /usr/bin/vim
+[user]
+	name = Alex Wendland
+[user]
+	email = me@alexwendland.com
+[alias]
+	co = checkout
+	ci = commit
+	s = status
+	l = log
+	cim = commit -m
+	cia = commit --amend
+	cg = config --global
+	d = diff
+	a = add
+	aa = add -A
+	poh = push origin HEAD
+	po = push origin
+	ds = diff --staged
+	lo = log --oneline
+	lp = log -p
+	ap = add -p

@@ -1,11 +1,20 @@
-tree			# Prints out directory structure
-ssmtp			# Emailing client
-ipython			# Improved python executer
-wget			# Easy Internet download program
-brew			# OSX package manager
-bash-completion	# Adds tab completion to more of bash
-aria2c			# torrent/magnet download
-pv				# cat, with a progress bar
+#################
+#     Unix      #
+#################
+fish       # Friendly shell w/ good defaults
+tree       # Prints out directory structure
+ag         # Faster grep
+wget       # Easy Internet download program
+pygmentize # CLI syntax highlighter
+trash      # rm but moves to trash
+ssmtp      # Emailing client
+ipython    # Improved python executer
+aria2c     # Torrent/magnet download
+pv         # Cat, with a progress bar
 
-# OSX
-reddit-background	# Update desktop background by reddit rss https://github.com/rconradharris/reddit-background
+#################
+#     macOS     #
+#################
+brew               # OSX package manager
+reddit-background  # Update desktop background by reddit https://github.com/awendland/reddit-wallpaper
+neovim             # Improved vim for macOS

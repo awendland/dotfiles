@@ -1,0 +1,103 @@
+"
+" Install plugins
+"
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'kien/ctrlp.vim'
+Plug 'Valloric/YouCompleteMe'
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'facebook/vim-flow', { 'for': 'javascript' }
+Plug 'scrooloose/nerdtree'
+Plug 'vim-airline/vim-airline'
+Plug 'airblade/vim-gitgutter'
+Plug 'wesQ3/vim-windowswap'
+Plug 'tomasr/molokai'
+
+call plug#end()
+
+"
+" Custom Commands/Settings
+"
+
+" open splits to the left || below
+set splitbelow
+set splitright
+
+" Highlight all search matches
+set hlsearch
+
+" enable mouse clicking/dragging
+set mouse=a
+
+" allow backspace to delete through line breaks
+set backspace=indent,eol,start
+
+" disable swap files
+set noswapfile
+
+" enable persistent undo so that undo history persists across vim sessions
+set undofile
+set undodir=~/.vim/undo
+
+" increase update frequency (recommended by vim-gitgutter)
+set updatetime=250
+
+" NERDTree
+" close vim if the only window left open is a NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+" ctrlp
+let g:ctrlp_custom_ignore = {
+  \ 'dir': '\v[\/](\.git|node_modules|\.sass-cache|bower_components|build)$'
+  \ }
+
+"
+" Custom Keymappings
+"
+
+" set leader key
+let mapleader=','
+
+" faster pane navigation
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" open NERDTree with Ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+
+" clear search highlight
+nmap <silent> <leader>/ :nohlsearch<CR>
+
+"
+" Language/Style Settings
+"
+
+" General
+syntax on
+filetype plugin indent on
+colorscheme molokai
+
+set expandtab
+set tabstop=2
+set shiftwidth=2
+
+set number
+
+set colorcolumn=100
+augroup LongLines
+  autocmd!
+  autocmd FileType * match none
+  autocmd FileType python,c,sh,javascript,flow,jsx match Error '\%>100v.\+'
+augroup END
+
+" show whitespace
+set list
+set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
+
+" OCaml
+"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+"execute "set rtp+=" . g:opamshare . "/merlin/vim"
+"let g:syntastic_ocaml_checkers = ['merlin']
