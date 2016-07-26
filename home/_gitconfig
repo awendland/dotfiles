@@ -14,11 +14,14 @@
 	cia = commit --amend
 	cg = config --global
 	d = diff
+	ds = diff --staged
 	a = add
 	aa = add -A
+	r = rebase
+	rc = rebase --continue
+	ra = rebase --abort
 	poh = push origin HEAD
 	po = push origin
-	ds = diff --staged
 	lo = log --oneline
 	lp = log -p
 	ap = add -p
