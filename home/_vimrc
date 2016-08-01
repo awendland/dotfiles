@@ -46,6 +46,8 @@ set updatetime=250
 " NERDTree
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" show hidden files by default
+let NERDTreeShowHidden=1
 
 " ctrlp
 let g:ctrlp_custom_ignore = {
