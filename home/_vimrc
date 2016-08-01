@@ -67,14 +67,8 @@ let g:ctrlp_custom_ignore = {
 " set leader key
 let mapleader=','
 
-" faster pane navigation
-nnoremap <c-j> <c-w>j
-nnoremap <c-k> <c-w>k
-nnoremap <c-h> <c-w>h
-nnoremap <c-l> <c-w>l
-
 " open NERDTree with Ctrl + n
-map <C-n> :NERDTreeToggle<CR>
+map <leader>n :NERDTreeToggle<CR>
 
 " clear search highlight
 nmap <silent> <leader>/ :nohlsearch<CR>
@@ -91,6 +85,7 @@ colorscheme molokai
 set expandtab
 set tabstop=2
 set shiftwidth=2
+set softtabstop=2
 
 set number
 
