@@ -4,14 +4,19 @@
 
 call plug#begin('~/.vim/plugged')
 
+" General
 Plug 'kien/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
-Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'facebook/vim-flow', { 'for': 'javascript' }
 Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'wesQ3/vim-windowswap'
+
+" Languages
+Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
+Plug 'facebook/vim-flow', { 'for': 'javascript' }
+
+" Themes
 Plug 'tomasr/molokai'
 
 call plug#end()
