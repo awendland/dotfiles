@@ -11,6 +11,7 @@ Plug 'scrooloose/nerdtree'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'wesQ3/vim-windowswap'
+Plug 'terryma/vim-multiple-cursors'
 
 " Languages
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
