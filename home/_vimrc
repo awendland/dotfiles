@@ -67,7 +67,10 @@ let g:ctrlp_custom_ignore = {
 " set leader key
 let mapleader=','
 
-" open NERDTree with Ctrl + n
+" disable CTRL-w + q
+nmap <C-w>q <NOP>
+
+" open NERDTree with Leader + n
 map <leader>n :NERDTreeToggle<CR>
 
 " clear search highlight
