@@ -73,6 +73,9 @@ nmap <C-w>q <NOP>
 " open NERDTree with Leader + n
 map <leader>n :NERDTreeToggle<CR>
 
+" reload ctrlp cache with Leader + p
+map <leader>p :ClearCtrlPCache<CR>
+
 " clear search highlight
 nmap <silent> <leader>/ :nohlsearch<CR>
 
