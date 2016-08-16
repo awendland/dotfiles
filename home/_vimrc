@@ -109,7 +109,16 @@ augroup END
 set list
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
-" OCaml
-"let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
-"execute "set rtp+=" . g:opamshare . "/merlin/vim"
-"let g:syntastic_ocaml_checkers = ['merlin']
+"=================
+" Custom Functions
+"=================
+
+" DiffSaved: diff the current buffer with the contents on disk
+function! s:DiffWithSaved()
+  let filetype=&ft
+  diffthis
+  vnew | r # | normal! 1Gdd
+  diffthis
+  exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
+endfunction
+com! DiffSaved call s:DiffWithSaved()
