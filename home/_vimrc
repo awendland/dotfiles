@@ -1,6 +1,6 @@
-"
+"================
 " Install plugins
-"
+"================
 
 call plug#begin('~/.vim/plugged')
 
@@ -8,6 +8,7 @@ call plug#begin('~/.vim/plugged')
 Plug 'kien/ctrlp.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
 Plug 'airblade/vim-gitgutter'
 Plug 'wesQ3/vim-windowswap'
@@ -22,9 +23,9 @@ Plug 'tomasr/molokai'
 
 call plug#end()
 
-"
+"=========================
 " Custom Commands/Settings
-"
+"=========================
 
 " open splits to the left || below
 set splitbelow
@@ -50,8 +51,6 @@ set undodir=~/.vim/undo
 set updatetime=250
 
 " NERDTree
-" close vim if the only window left open is a NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " show hidden files by default
 let NERDTreeShowHidden=1
 
@@ -62,7 +61,7 @@ let g:ctrlp_custom_ignore = {
 
 "
 " Custom Keymappings
-"
+"===================
 
 " set leader key
 let mapleader=','
@@ -70,8 +69,8 @@ let mapleader=','
 " disable CTRL-w + q
 nmap <C-w>q <NOP>
 
-" open NERDTree with Leader + n
-map <leader>n :NERDTreeToggle<CR>
+" open NERDTreeTabs with Leader + n
+map <leader>n :NERDTreeTabsToggle<CR>
 
 " reload ctrlp cache with Leader + p
 map <leader>p :ClearCtrlPCache<CR>
@@ -79,9 +78,9 @@ map <leader>p :ClearCtrlPCache<CR>
 " clear search highlight
 nmap <silent> <leader>/ :nohlsearch<CR>
 
-"
+"========================
 " Language/Style Settings
-"
+"========================
 
 " General
 syntax on
