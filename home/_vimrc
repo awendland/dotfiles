@@ -59,7 +59,10 @@ let g:ctrlp_custom_ignore = {
   \ 'dir': '\v[\/](\.git|node_modules|\.sass-cache|bower_components|build)$'
   \ }
 
-"
+" vim-flow
+let g:flow#enable = 0
+
+"===================
 " Custom Keymappings
 "===================
 
