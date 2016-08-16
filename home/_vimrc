@@ -71,6 +71,7 @@ let mapleader=','
 
 " disable CTRL-w + q
 nmap <C-w>q <NOP>
+nmap <C-w><C-q> <NOP>
 
 " open NERDTreeTabs with Leader + n
 map <leader>n :NERDTreeTabsToggle<CR>
