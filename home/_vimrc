@@ -17,6 +17,7 @@ Plug 'terryma/vim-multiple-cursors'
 " Languages
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
+Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
 " Themes
 Plug 'tomasr/molokai'
