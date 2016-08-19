@@ -39,7 +39,7 @@ set hlsearch
 set mouse=a
 
 " allow backspace to delete through line breaks
-set backspace=indent,start
+set backspace=indent,eol,start
 
 " disable swap files
 set noswapfile
