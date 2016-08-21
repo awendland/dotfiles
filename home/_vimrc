@@ -19,8 +19,10 @@ Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
 
-" Themes
-Plug 'tomasr/molokai'
+" Local plugins
+if filereadable(glob('~/.vimrc.local.plug'))
+  source ~/.vimrc.local.plug
+endif
 
 call plug#end()
 
@@ -90,7 +92,6 @@ nmap <silent> <leader>/ :nohlsearch<CR>
 " General
 syntax on
 filetype plugin indent on
-colorscheme molokai
 
 set expandtab
 set tabstop=2
@@ -123,3 +124,11 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+"===============
+" Local settings
+"===============
+
+if filereadable(glob('~/.vimrc.local'))
+  source ~/.vimrc.local
+endif
