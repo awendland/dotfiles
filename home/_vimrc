@@ -15,6 +15,7 @@ Plug 'wesQ3/vim-windowswap'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'easymotion/vim-easymotion'
+Plug 'tpope/vim-fugitive'
 
 " Languages
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
