@@ -1,16 +1,18 @@
 #################
 #     Unix      #
 #################
-fish       # Friendly shell w/ good defaults
-tree       # Prints out directory structure
-ag         # Faster grep
-wget       # Easy Internet download program
-pygmentize # CLI syntax highlighter
-trash      # rm but moves to trash
-ssmtp      # Emailing client
-ipython    # Improved python executer
-aria2c     # Torrent/magnet download
-pv         # Cat, with a progress bar
+fish          # Friendly shell w/ good defaults
+tree          # Prints out directory structure
+ag            # Faster grep
+wget          # Easy Internet download program
+pygmentize    # CLI syntax highlighter
+trash         # rm but moves to trash
+ssmtp         # Emailing client
+ipython       # Improved python executer
+aria2c        # Torrent/magnet download
+pv            # Cat, with a progress bar
+fzf           # Fuzzy file finder (installed w/ vim)
+diff-so-fancy # Better diff UI for git
 
 #################
 #     macOS     #

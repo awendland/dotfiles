@@ -5,7 +5,8 @@
 call plug#begin('~/.vim/plugged')
 
 " General
-Plug 'kien/ctrlp.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Sets fzf up globally
+Plug 'junegunn/fzf.vim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
@@ -62,11 +63,6 @@ set updatetime=250
 " show hidden files by default
 let NERDTreeShowHidden=1
 
-" ctrlp
-let g:ctrlp_custom_ignore = {
-  \ 'dir': '\v[\/](\.git|node_modules|\.sass-cache|bower_components|build)$'
-  \ }
-
 " vim-flow
 let g:flow#enable = 0
 
@@ -75,7 +71,7 @@ let g:flow#enable = 0
 "===================
 
 " set leader key
-let mapleader=','
+let mapleader = ','
 
 " disable CTRL-w + q
 nmap <C-w>q <NOP>
@@ -84,8 +80,9 @@ nmap <C-w><C-q> <NOP>
 " open NERDTreeTabs with Leader + n
 map <leader>n :NERDTreeTabsToggle<CR>
 
-" reload ctrlp cache with Leader + p
-map <leader>p :ClearCtrlPCache<CR>
+" fzf
+" load fzf Files w/ ctrl + p
+map <C-p> :Files<CR>
 
 " clear search highlight
 nmap <silent> <leader>/ :nohlsearch<CR>
