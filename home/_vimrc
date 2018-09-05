@@ -24,6 +24,8 @@ Plug 'tpope/vim-repeat'
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
 Plug 'facebook/vim-flow', { 'for': 'javascript' }
 Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
+Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
 
 " Local plugins
 if filereadable(glob('~/.vimrc.local.plug'))
@@ -117,8 +119,11 @@ set colorcolumn=100
 augroup LongLines
   autocmd!
   autocmd FileType * match none
-  autocmd FileType python,c,sh,javascript,flow,jsx match Error '\%>100v.\+'
+  autocmd FileType python,c,sh,javascript,flow,jsx,ts,tsx match Error '\%>100v.\+'
 augroup END
+
+" set indent guide colors
+set background=dark
 
 " show whitespace
 set list
