@@ -71,6 +71,20 @@ alias download 'wget --content-disposition'
 alias wanip 'dig +short myip.opendns.com @resolver1.opendns.com'
 #A Retrieve more robust info about the current wan IP
 alias ipinfo 'curl ipinfo.io'
+#A Decode percent encoded URL
+alias urldecode 'python -c "import sys, urllib as ul; print ul.unquote_plus(sys.argv[1])"'
+#A Encode url with percent encoding
+alias urlencode 'python -c "import sys, urllib as ul; print ul.quote_plus(sys.argv[1])"'
+
+#H Android aliases
+#A Take a screenshot and pipe it to stdout
+alias adbscreen 'adb exec-out screencap -p'
+#A Save a logcat file w/ the current date (and stream contents live on screen)
+alias logcat 'adb logcat | tee logcat-(date -u +"%Y%m%d%H%M%SZ").txt'
+
+#H SSH aliases
+#A List all SSH tunnels
+alias ssh-tunnels 'lsof -i -n -P | grep -e \'IPv4\' | grep -E \'^ssh\\>\''
 
 #H OSX
 switch (uname)
