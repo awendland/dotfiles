@@ -1,13 +1,13 @@
 [core]
 	excludesfile = /Users/awendland/.gitignore_global
 	editor = /usr/bin/vim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [user]
 	name = Alex Wendland
 [user]
 	email = me@alexwendland.com
 [alias]
 	co = checkout
-	ci = commit
 	s = status
 	l = log
 	cim = commit -m
@@ -22,7 +22,22 @@
 	ra = rebase --abort
 	poh = push origin HEAD
 	po = push origin
-	lo = log --oneline
+	ll = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short --numstat --abbrev=8
+	lo = log --oneline --abbrev=8
 	lp = log -p
+	ls = log --stat
+	lm = log -p -m --first-parent
 	ap = add -p
-	lpretty = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	lg = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(bold yellow)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)' --all
+	recommit = commit --amend --no-edit
+	git = !exec git
+	g = !exec git
+	pohf = push origin HEAD --force-with-lease
+	pot = push origin --tags
+[color]
+	ui = auto
+[advice]
+	statusHints = false
+[diff]
+	renames = copies
+	mnemonicprefix = true

@@ -10,6 +10,13 @@
 *.iml
 *.iws
 
+# VS Code
+.vscode/
+
+#       Tools        #
+######################
+.agignore
+
 # OS generated files #
 ######################
 # OS X
