@@ -87,7 +87,7 @@ function fish_prompt --description 'Write out the prompt'
 		)
 	end
 	
-	set -l __fish_prompt_host_and_name (set_color $fish_color_user)"$USER" $normal "@" (set_color $fish_color_host) "$__fish_prompt_hostname" $normal ': ' 
+	set -l __fish_prompt_host_and_name (set_color $fish_color_user) (string sub -l 5 "$USER") ".." $normal "@" (set_color $fish_color_host) (string sub -l 8 "$__fish_prompt_hostname")  ".." $normal ': ' 
 	set -l __fish_prompt_headline (set_color $color_cwd) (prompt_pwd) $normal (__fish_git_prompt) $normal $prompt_status "$mode_str"
 	#if math ""(string length $__fish_prompt_host_and_name$__fish_prompt_headline)"==$COLUMNS - 10"
 	    set -l __fish_prompt_headline $__fish_prompt_host_and_name $__fish_prompt_headline
@@ -96,5 +96,5 @@ function fish_prompt --description 'Write out the prompt'
 	if set -q VIRTUAL_ENV
 		echo -s (set_color blue) "(venv: " $normal (basename "$VIRTUAL_ENV") (set_color blue) ")" $normal
 	end
-	echo -n -s "\$ "
+	echo -n -s "[" (set_color blue) (date "+$c2%H$c0:$c2%M$c0:$c2%S") $normal "]" " \$ "
 end
