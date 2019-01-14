@@ -7,7 +7,6 @@ call plug#begin('~/.vim/plugged')
 " General
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " Sets fzf up globally
 Plug 'junegunn/fzf.vim'
-Plug 'Valloric/YouCompleteMe'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'vim-airline/vim-airline'
@@ -19,13 +18,26 @@ Plug 'easymotion/vim-easymotion'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-repeat'
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+elseif has("python3")
+  " Deoplete requires additional items in vim8
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+Plug 'w0rp/ale'
 
 " Languages
 Plug 'pangloss/vim-javascript', { 'for': 'javascript' }
-Plug 'facebook/vim-flow', { 'for': 'javascript' }
-Plug 'leafgarland/typescript-vim', { 'for': 'typescript' }
+Plug 'HerringtonDarkholme/yats.vim', { 'for': ['typescript', 'typescript.tsx'] }
+Plug 'mhartington/nvim-typescript', { 'do': ':UpdateRemotePlugins', 'for': ['typescript', 'typescript.tsx'] }
 Plug 'derekwyatt/vim-scala', { 'for': 'scala' }
 Plug 'hashivim/vim-terraform', { 'for': 'terraform' }
+
+" Theming and personal
+Plug 'rakr/vim-one'
+Plug 'wakatime/vim-wakatime'
 
 " Local plugins
 if filereadable(glob('~/.vimrc.local.plug'))
@@ -100,6 +112,9 @@ let g:EasyMotion_smartcase = 1
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)<Paste>
 
+" run autofixed
+map <Leader>f :ALEFix<CR>
+
 "========================
 " Language/Style Settings
 "========================
@@ -129,6 +144,21 @@ set background=dark
 set list
 set listchars=tab:>\ ,trail:-,extends:>,precedes:<,nbsp:+
 
+" Use deoplete
+let g:deoplete#enable_at_startup = 1
+
+" enable default nvim-typescript bindings
+let g:nvim_typescript#default_mappings = 1
+
+" enable prettier and eslint fix for javascript files
+let g:ale_fixers = {
+\   'javascript': ['prettier', 'eslint'],
+\}
+" enable eslint-ing on javascript files
+let g:ale_linters = {
+\   'javascript': ['eslint'],
+\}
+
 "=================
 " Custom Functions
 "=================
@@ -142,6 +172,16 @@ function! s:DiffWithSaved()
   exe "setlocal bt=nofile bh=wipe nobl noswf ro ft=" . filetype
 endfunction
 com! DiffSaved call s:DiffWithSaved()
+
+"========
+" Theming
+"========
+
+" Enable one dark theme
+set background=dark
+let g:one_allow_italics = 1
+let g:airline_theme='one'
+colorscheme one
 
 "===============
 " Local settings
