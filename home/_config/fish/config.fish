@@ -14,11 +14,14 @@ source ~/.config/fish/aliases.fish
 # enable vi mode
 set -u fish_key_bindings fish_vi_key_bindings
 
-# set nvim as editor
+# set vim as editor
 set -gx EDITOR 'vim'
 
 # add ~/.scripts to path
 set PATH $HOME/.scripts $PATH
+
+# cause less to stay on screen, and print ansi colors
+set -gx LESS '-RX'
 
 ################
 # Local Config #

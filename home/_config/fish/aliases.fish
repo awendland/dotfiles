@@ -15,6 +15,7 @@ switch (uname)
     case Darwin
         if type rmtrash > /dev/null 2> /dev/null
             alias trash 'rmtrash'
+        else if type trash > /dev/null 2> /dev/null
         else
             printf "\n\\033[1;31mALERT:\\033[0m You should \\033[34m'brew install rmtrash'\\033[0m for better rm practice"
         end
