@@ -55,6 +55,10 @@ alias filesthatcontain 'grep -Rl . -e'
 #A Alias for finding text that only occurs in the second file provided
 alias onlyin2nd 'grep -Fxvf'
 
+#H Terraform
+#A Alias for shorter terraform
+alias tf 'terraform'
+
 #H Less aliases
 #A Alias for chopping lines in less instead of wrapping them
 alias lessnw 'less -S'
