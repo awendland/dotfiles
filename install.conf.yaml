@@ -17,6 +17,7 @@
     ~/.gitignore_global: home/_gitignore_global
     ~/.gitconfig: home/_gitconfig
     ~/.vimrc: home/_vimrc
+    ~/.config/nvim/init.vim: home/_vimrc
     ~/.inputrc: home/_inputrc
 
 - shell:
