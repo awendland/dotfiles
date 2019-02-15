@@ -22,4 +22,5 @@
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
-  - [command -v fish && fisher add jorgebucaran/fnm, Install fnm if fish is present]
+  - [command -v fish && curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish, Install fisher if fish is present]
+  - [command -v fish && fish -c fisher add jorgebucaran/fnm, Install fnm if fish is present]
