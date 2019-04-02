@@ -13,8 +13,14 @@
 # VS Code
 .vscode/
 
+#     Languages      #
+######################
+# Python
+*.pyc
+
 #       Tools        #
 ######################
+# Silver Searcher
 .agignore
 
 # OS generated files #
