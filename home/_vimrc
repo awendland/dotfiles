@@ -191,12 +191,16 @@ com! DiffSaved call s:DiffWithSaved()
 " Theming
 "========
 
-" Enable one dark theme
+" " Most likely, true color support can be enabled
+" set termguicolors
+
+" " Enable one dark theme
 " set background=dark
 " let g:one_allow_italics = 1
 " let g:airline_theme='one'
 " colorscheme one
-" or high contrast theme
+
+" " or high contrast theme
 " colorscheme tempus_totus
 
 "===============
