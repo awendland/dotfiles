@@ -5,7 +5,9 @@
 ##################
 
 # fish aliases
-source ~/.config/fish/aliases.fish
+if test -e ~/.config/fish/aliases.fish
+  source ~/.config/fish/aliases.fish
+end
 
 # ensure fisher is installed
 if not functions -q fisher
@@ -30,8 +32,13 @@ set PATH $HOME/.scripts $PATH
 # cause less to stay on screen, and print ansi colors
 set -gx LESS '-RX'
 
+# disable cowsay w/ ansible
+set -gx ANSIBLE_NOCOWS '1'
+
 ################
 # Local Config #
 ################
 
-source ~/.config/fish/local_config.fish
+if test -e ~/.config/fish/local_config.fish
+  source ~/.config/fish/local_config.fish
+end
