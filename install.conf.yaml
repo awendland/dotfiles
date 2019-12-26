@@ -11,7 +11,6 @@
     ~/.config/fish/aliases.fish: home/_config/fish/aliases.fish
     ~/.config/fish/functions/fleshcode.fish: home/_config/fish/functions/fleshcode.fish
     ~/.config/fish/functions/transfer.fish: home/_config/fish/functions/transfer.fish
-    ~/.config/fish/functions/fish_prompt.fish: home/_config/fish/functions/fish_prompt.fish
     ~/.config/fish/functions/fcd.fish: home/_config/fish/functions/fcd.fish
     ~/.config/fish/functions/n.fish: home/_config/fish/functions/n.fish
     # tmux
