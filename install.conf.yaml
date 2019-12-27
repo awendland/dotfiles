@@ -32,7 +32,7 @@
   - ["command -v fish && curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish",
      Install fisher if fish is present]
   - ["command -v fish && fish -c 'fisher add jorgebucaran/fnm'", Install fnm if fish is present]
-  - ["command -v fish && fish -c 'fisher add matchai/spacefish'", Install spacefish prompt if fish is present]
+  - ["command -v fish && command -v starship || curl -fsSL https://starship.rs/install.sh | bash -s - --yes", Install starship prompt if fish is present]
   - ["command -v nvim && curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",
      Install plug for neovim]
   - ["command -v nvim || curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim",

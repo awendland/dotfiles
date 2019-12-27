@@ -35,6 +35,13 @@ set -gx LESS '-RX'
 # disable cowsay w/ ansible
 set -gx ANSIBLE_NOCOWS '1'
 
+###########
+# Theming #
+###########
+
+# enable starfish prompt, if installed
+command -v starship > /dev/null 2>&1 && starship init fish | source
+
 ################
 # Local Config #
 ################
