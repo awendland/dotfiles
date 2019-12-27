@@ -14,7 +14,144 @@
       "Scrollback Lines" : 0,
       "Close Sessions On End" : true,
       "Terminal Type" : "xterm-256color",
-      "Session Close Undo Timeout" : 10
+      "Session Close Undo Timeout" : 10,
+      "Custom Directory": "Recycle",
+      "Ansi 0 Color": {
+        "Blue Component": 0.3097887,
+        "Green Component": 0.3097887,
+        "Red Component": 0.3097887
+      },
+      "Ansi 1 Color": {
+        "Blue Component": 0.3764706,
+        "Green Component": 0.4235294,
+        "Red Component": 1
+      },
+      "Ansi 10 Color": {
+        "Blue Component": 0.6727703,
+        "Green Component": 1,
+        "Red Component": 0.8094148
+      },
+      "Ansi 11 Color": {
+        "Blue Component": 0.7996491,
+        "Green Component": 1,
+        "Red Component": 1
+      },
+      "Ansi 12 Color": {
+        "Blue Component": 0.9982605,
+        "Green Component": 0.8627756,
+        "Red Component": 0.7116503
+      },
+      "Ansi 13 Color": {
+        "Blue Component": 0.9965209,
+        "Green Component": 0.6133059,
+        "Red Component": 1
+      },
+      "Ansi 14 Color": {
+        "Blue Component": 0.9970397,
+        "Green Component": 0.8763103,
+        "Red Component": 0.8759136
+      },
+      "Ansi 15 Color": {
+        "Blue Component": 1,
+        "Green Component": 1,
+        "Red Component": 1
+      },
+      "Ansi 2 Color": {
+        "Blue Component": 0.3764706,
+        "Green Component": 1,
+        "Red Component": 0.6588235
+      },
+      "Ansi 3 Color": {
+        "Blue Component": 0.7137255,
+        "Green Component": 1,
+        "Red Component": 1
+      },
+      "Ansi 4 Color": {
+        "Blue Component": 0.9960784,
+        "Green Component": 0.7960784,
+        "Red Component": 0.5882353
+      },
+      "Ansi 5 Color": {
+        "Blue Component": 0.9921569,
+        "Green Component": 0.4509804,
+        "Red Component": 1
+      },
+      "Ansi 6 Color": {
+        "Blue Component": 0.9960784,
+        "Green Component": 0.772549,
+        "Red Component": 0.7764706
+      },
+      "Ansi 7 Color": {
+        "Blue Component": 0.9335317,
+        "Green Component": 0.9335317,
+        "Red Component": 0.9335317
+      },
+      "Ansi 8 Color": {
+        "Blue Component": 0.4862745,
+        "Green Component": 0.4862745,
+        "Red Component": 0.4862745
+      },
+      "Ansi 9 Color": {
+        "Blue Component": 0.6901961,
+        "Green Component": 0.7137255,
+        "Red Component": 1
+      },
+      "Background Color": {
+        "Blue Component": 0,
+        "Green Component": 0,
+        "Red Component": 0
+      },
+      "Badge Color": {
+        "Alpha Component": 0.5,
+        "Blue Component": 0,
+        "Color Space": "sRGB",
+        "Green Component": 0.1491314172744751,
+        "Red Component": 1
+      },
+      "Bold Color": {
+        "Blue Component": 1,
+        "Green Component": 1,
+        "Red Component": 1
+      },
+      "Cursor Color": {
+        "Blue Component": 0.3764706,
+        "Green Component": 0.6470588,
+        "Red Component": 1
+      },
+      "Cursor Guide Color": {
+        "Alpha Component": 0.25,
+        "Blue Component": 1,
+        "Color Space": "sRGB",
+        "Green Component": 0.9268307089805603,
+        "Red Component": 0.7021318674087524
+      },
+      "Cursor Text Color": {
+        "Blue Component": 1,
+        "Green Component": 1,
+        "Red Component": 1
+      },
+      "Foreground Color": {
+        "Blue Component": 0.7333333492279053,
+        "Green Component": 0.7333333492279053,
+        "Red Component": 0.7333333492279053
+      },
+      "Link Color": {
+        "Alpha Component": 1,
+        "Blue Component": 0.734233021736145,
+        "Color Space": "sRGB",
+        "Green Component": 0.3591606020927429,
+        "Red Component": 0
+      },
+      "Selected Text Color": {
+        "Blue Component": 0.9476005,
+        "Green Component": 0.9476005,
+        "Red Component": 0.9476005
+      },
+      "Selection Color": {
+        "Blue Component": 0.5153061,
+        "Green Component": 0.2224857,
+        "Red Component": 0.2099074
+      }
     }
   ]
 }
