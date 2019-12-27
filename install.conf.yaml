@@ -24,8 +24,6 @@
     ~/.config/nvim/init.vim: home/_vimrc
     # inputrc
     ~/.inputrc: home/_inputrc
-    # iterm2
-    ~/Library/Application Support/iTerm2/DynamicProfiles/Alex's Default.json: home/Library/Application Support/iTerm2/DynamicProfiles/Alex's Default.json
 
 - shell:
   - ["git submodule update --init --recursive", Installing submodules]
