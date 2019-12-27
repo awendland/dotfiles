@@ -13,6 +13,9 @@
 # VS Code
 .vscode/
 
+# VIM
+.swp
+
 #     Languages      #
 ######################
 # Python
