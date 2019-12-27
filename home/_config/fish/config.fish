@@ -42,6 +42,12 @@ set -gx ANSIBLE_NOCOWS '1'
 # enable starfish prompt, if installed
 command -v starship > /dev/null 2>&1 && starship init fish | source
 
+#########################
+# Language Environments #
+#########################
+
+command -v pyenv > /dev/null 2>&1 && pyenv init - | source
+
 ################
 # Local Config #
 ################
