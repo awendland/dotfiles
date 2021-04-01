@@ -14,6 +14,8 @@
     ~/.config/fish/functions/n.fish: home/_config/fish/functions/n.fish
     ~/.config/fish/functions/transfer.fish: home/_config/fish/functions/transfer.fish
     ~/.config/fish/functions/vicd.fish: home/_config/fish/functions/vicd.fish
+    # starship (prompt)
+    ~/.config/starship.toml: home/_config/starship.toml
     # tmux
     ~/.tmux.conf: home/_tmux.conf
     # git

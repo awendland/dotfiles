@@ -1,0 +1,16 @@
+################################################################################
+# Disable cloud modules which lengthen every prompt and add little value to me #
+################################################################################
+
+# Disable the gcloud module which "shows the current configuration for gcloud (opens new window) CLI."
+[gcloud]
+disabled = true
+
+# Disable the aws module which "shows the current AWS region and profile."
+[aws]
+disabled = true
+
+##################
+# Disable the package module which "is shown when the current directory is the repository for a package, and shows its current version."
+[package]
+disabled = true
