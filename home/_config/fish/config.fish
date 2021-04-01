@@ -47,6 +47,13 @@ command -v starship > /dev/null 2>&1 && starship init fish | source
 #########################
 
 command -v pyenv > /dev/null 2>&1 && pyenv init - | source
+command -v pyenv > /dev/null 2>&1 && pyenv virtualenv-init - | source
+command -v rbenv > /dev/null 2>&1 && status --is-interactive && source (rbenv init -|psub)
+if test -e $HOME/.cargo/env # rust
+  source $HOME/.cargo/env
+end
+set PATH $HOME/go/bin $PATH # golang binaries
+set PATH $HOME/.local/bin $PATH # python binaries
 
 ################
 # Local Config #
