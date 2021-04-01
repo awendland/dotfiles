@@ -5,8 +5,22 @@
 
 [user]
 	name = Alex Wendland
+
 [user]
 	email = me@alexwendland.com
+
+[init]
+	defaultBranch = main
+
+[rerere]
+	enabled = true
+
+[color]
+	ui = auto
+
+[advice]
+	statusHints = false
+
 [alias]
 	co = checkout
 	s = status
@@ -35,10 +49,7 @@
 	g = !exec git
 	pohf = push origin HEAD --force-with-lease
 	pot = push origin --tags
-[color]
-	ui = auto
-[advice]
-	statusHints = false
+
 [diff]
 	renames = copies
 	mnemonicprefix = true
