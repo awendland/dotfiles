@@ -1,7 +1,8 @@
 [core]
 	excludesfile = /Users/awendland/.gitignore_global
 	editor = vim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+	pager = delta
+
 [user]
 	name = Alex Wendland
 [user]
@@ -41,3 +42,10 @@
 [diff]
 	renames = copies
 	mnemonicprefix = true
+
+[interactive]
+	diffFilter = delta --color-only
+
+[delta]
+	side-by-side = true
+
