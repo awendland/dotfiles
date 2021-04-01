@@ -8,12 +8,10 @@
 - link:
     ~/.dotfiles: ''
     # fish
-    ~/.config/fish/config.fish: home/_config/fish/config.fish
     ~/.config/fish/aliases.fish: home/_config/fish/aliases.fish
-    ~/.config/fish/functions/fleshcode.fish: home/_config/fish/functions/fleshcode.fish
-    ~/.config/fish/functions/transfer.fish: home/_config/fish/functions/transfer.fish
-    ~/.config/fish/functions/fcd.fish: home/_config/fish/functions/fcd.fish
+    ~/.config/fish/config.fish: home/_config/fish/config.fish
     ~/.config/fish/functions/n.fish: home/_config/fish/functions/n.fish
+    ~/.config/fish/functions/transfer.fish: home/_config/fish/functions/transfer.fish
     # tmux
     ~/.tmux.conf: home/_tmux.conf
     # git
