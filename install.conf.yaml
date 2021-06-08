@@ -10,6 +10,7 @@
     # fish
     ~/.config/fish/aliases.fish: home/_config/fish/aliases.fish
     ~/.config/fish/config.fish: home/_config/fish/config.fish
+    ~/.config/fish/functions/aws-session.fish: home/_config/fish/functions/aws-session.fish
     ~/.config/fish/functions/fish_cognito.fish: home/_config/fish/functions/fish_cognito.fish
     ~/.config/fish/functions/n.fish: home/_config/fish/functions/n.fish
     ~/.config/fish/functions/transfer.fish: home/_config/fish/functions/transfer.fish
