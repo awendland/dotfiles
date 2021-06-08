@@ -46,8 +46,13 @@ command -v starship > /dev/null 2>&1 && starship init fish | source
 # Language Environments #
 #########################
 
-command -v pyenv > /dev/null 2>&1 && pyenv init - | source
-command -v pyenv > /dev/null 2>&1 && pyenv virtualenv-init - | source
+if command -v pyenv > /dev/null 2>&1
+  set -Ux PYENV_ROOT $HOME/.pyenv
+  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
+  status is-login; and pyenv init --path | source
+  pyenv init - | source
+  pyenv virtualenv-init - | source
+end
 command -v rbenv > /dev/null 2>&1 && status --is-interactive && source (rbenv init -|psub)
 if test -e $HOME/.cargo/env # rust
   source $HOME/.cargo/env
