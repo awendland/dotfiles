@@ -26,6 +26,8 @@
     ~/.config/nvim/init.vim: home/_vimrc
     # inputrc
     ~/.inputrc: home/_inputrc
+    # scripts
+    ~/scripts: home/_scripts
 
 - shell:
   - ["git submodule update --init --recursive", Installing submodules]
