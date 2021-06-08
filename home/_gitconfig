@@ -58,5 +58,4 @@
 	diffFilter = delta --color-only
 
 [delta]
-	side-by-side = true
 
