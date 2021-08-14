@@ -47,6 +47,7 @@
 	recommit = commit --amend --no-edit
 	git = !exec git
 	g = !exec git
+	roh = git reset FETCH_HEAD --hard
 	pohf = push origin HEAD --force-with-lease
 	pot = push origin --tags
 
