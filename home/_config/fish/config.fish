@@ -46,6 +46,9 @@ command -v starship > /dev/null 2>&1 && starship init fish | source
 # Language Environments #
 #########################
 
+if command -v asdf > /dev/null 2>&1
+  source (brew --prefix asdf)/libexec/asdf.fish
+end
 if command -v pyenv > /dev/null 2>&1
   set -Ux PYENV_ROOT $HOME/.pyenv
   set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
