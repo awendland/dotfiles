@@ -58,7 +58,7 @@ if command -v pyenv > /dev/null 2>&1
 end
 command -v rbenv > /dev/null 2>&1 && status --is-interactive && source (rbenv init -|psub)
 if test -e $HOME/.cargo/env # rust
-  source $HOME/.cargo/env
+  set PATH $HOME/.cargo/bin $PATH
 end
 set PATH $HOME/go/bin $PATH # golang binaries
 set PATH $HOME/.local/bin $PATH # python binaries
