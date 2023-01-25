@@ -4,6 +4,11 @@
 # config imports #
 ##################
 
+# handle homebrew
+if test -e /opt/homebrew/bin/brew
+  eval (/opt/homebrew/bin/brew shellenv)
+end
+
 # fish aliases
 if test -e ~/.config/fish/aliases.fish
   source ~/.config/fish/aliases.fish
