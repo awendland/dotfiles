@@ -1,22 +1,28 @@
+# Programs Reference
+#
+# NOTE: Actual package installation is managed by laptop-mbp ansible playbook.
+# This file is a reference for programs used by these dotfiles configs.
+
 #################
 #     Unix      #
 #################
 fish          # Friendly shell w/ good defaults
+neovim        # Improved vim (config in _vimrc)
 tree          # Prints out directory structure
-ag            # Faster grep
+ripgrep       # Fast grep (rg) - replaced ag
 wget          # Easy Internet download program
-pygmentize    # CLI syntax highlighter
 trash         # rm but moves to trash
-ssmtp         # Emailing client
-ipython       # Improved python executer
-aria2c        # Torrent/magnet download
-pv            # Cat, with a progress bar
-fzf           # Fuzzy file finder (installed w/ vim)
-diff-so-fancy # Better diff UI for git
+fzf           # Fuzzy file finder
+git-delta     # Better diff UI for git - replaced diff-so-fancy
+starship      # Cross-shell prompt
+
+#################
+#  Version Mgmt #
+#################
+mise          # Dev tool version manager (node, go, terraform) - replaced asdf/nvm
+uv            # Python package/tool manager - replaced pyenv/pip
 
 #################
 #     macOS     #
 #################
-brew               # OSX package manager
-reddit-background  # Update desktop background by reddit https://github.com/awendland/reddit-wallpaper
-neovim             # Improved vim for macOS
+brew          # macOS package manager

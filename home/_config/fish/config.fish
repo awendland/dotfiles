@@ -51,17 +51,10 @@ command -v starship > /dev/null 2>&1 && starship init fish | source
 # Language Environments #
 #########################
 
-if command -v asdf > /dev/null 2>&1
-  source (brew --prefix asdf)/libexec/asdf.fish
+if command -v mise > /dev/null 2>&1
+  mise activate fish | source
 end
-if command -v pyenv > /dev/null 2>&1
-  set -Ux PYENV_ROOT $HOME/.pyenv
-  set -U fish_user_paths $PYENV_ROOT/bin $fish_user_paths
-  status is-login; and pyenv init --path | source
-  pyenv init - | source
-  pyenv virtualenv-init - | source
-end
-command -v rbenv > /dev/null 2>&1 && status --is-interactive && source (rbenv init -|psub)
+# pyenv, rbenv - legacy, now using mise (node/go/terraform) and uv (python)
 if test -e $HOME/.cargo/env # rust
   set PATH $HOME/.cargo/bin $PATH
 end
