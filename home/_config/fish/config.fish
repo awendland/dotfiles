@@ -40,13 +40,6 @@ set -gx LESS '-RX'
 # disable cowsay w/ ansible
 set -gx ANSIBLE_NOCOWS '1'
 
-###########
-# Theming #
-###########
-
-# enable starfish prompt, if installed
-command -v starship > /dev/null 2>&1 && starship init fish | source
-
 #########################
 # Language Environments #
 #########################
@@ -60,6 +53,14 @@ if test -e $HOME/.cargo/env # rust
 end
 set PATH $HOME/go/bin $PATH # golang binaries
 set PATH $HOME/.local/bin $PATH # python binaries
+
+###########
+# Theming #
+###########
+
+# enable starship prompt, if installed
+# (must come after PATH setup above so starship in ~/.local/bin is found)
+command -v starship > /dev/null 2>&1 && starship init fish | source
 
 ################
 # Local Config #
